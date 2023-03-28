@@ -75,8 +75,6 @@ def solve():
     print(str_score, lexico_str)
 
 
-    
-
 num_tc = int(sys.stdin.readline().strip())
 for _ in range(num_tc):
     solve()
