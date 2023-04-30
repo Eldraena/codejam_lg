@@ -38,7 +38,7 @@ ll finv(int f)
     return powmod(f, MOD - 2, MOD);
 }
 
-//nCr = (n!/k!(n-k)!)%p
+//nCr = (n!/(k!(n-k)!))%p
 ll ncr(int n, int r)
 {
     return (((fact[n] * inv[r]) % MOD) * inv[n - r]) % MOD;
@@ -59,7 +59,6 @@ int main()
 {
     fio;
     init();
-//    cout << powmod(2, MOD - 2, MOD) << endl;
     
     cin >> tc;
     for(int t = 0; t < tc; t++)
