@@ -1,5 +1,3 @@
-//https://www.onlinegdb.com/
-
 #include <bits/stdc++.h>
 using namespace std;
 
