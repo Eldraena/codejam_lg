@@ -20,30 +20,13 @@ struct node
         children = _children;
         max_sum = _max_sum;
     }
-    
-    void show()
-    {
-        cout << "********" << endl;
-        cout << "This is the data of node " << id << "\n";
-        cout << "val: "  << val << "\n";
-        cout << "parent: " << parent << "\n";
-        cout << "children: ";
-        for(int i = 0; i < children.size(); i++)
-        {
-            cout << children[i] << " ";
-        }
-        cout << "\n";
-        cout << "max_sum: " << max_sum[0] << " " << max_sum[1] << "\n";
-        cout << "********" << endl;
-    }
 };
 
 vector<node> tree;
-
 void init(int n)
 {
-  tree.clear();
-  tree.assign(n + 5, {0, -1, {}, {0LL, 0LL}});
+    tree.clear();
+    tree.assign(n + 5, {0, -1, {}, {0LL, 0LL}});
 }
 
 void find_subset(int u)
@@ -76,9 +59,7 @@ void find_subset(int u)
         }
         
         if(i != 0 && tree[u].max_sum[0] < tmp_max)
-        {
             tree[u].max_sum[0] = tmp_max;
-        }
     }
 }
 
@@ -106,18 +87,10 @@ int main()
             cin >> tree[i].parent;
             tree[tree[i].parent].children.push_back(i);
             if(tree[i].parent == 0)
-            {
                 root = i;
-            }
         }
 
         find_subset(root); 
-/*        
-        for(int i = 1; i <= n; i++)
-        {
-            tree[i].show();
-        }
-*/
         cout << max(tree[root].max_sum[0], tree[root].max_sum[1]) << "\n";
     }
 
