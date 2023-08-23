@@ -56,8 +56,7 @@ void find_subset(int u)
                 int idx = (i >> j) & 1;
                 tmp_max += tree[tree[u].children[j]].max_sum[idx];
             }
-        }
-        
+        }        
         if(i != 0 && tree[u].max_sum[0] < tmp_max)
             tree[u].max_sum[0] = tmp_max;
     }
