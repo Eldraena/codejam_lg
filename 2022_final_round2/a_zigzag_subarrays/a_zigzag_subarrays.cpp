@@ -5,17 +5,7 @@ using namespace std;
 #define ll long long
 #define endl "\n"
 #define MAX_SIZE 100005
-
-bool isPos(vector<int>& dt, int pr)
-{
-    if(dt[pr] == dt[pr - 1] || dt[pr] == dt[pr + 1])
-        return false;    
-    if(dt[pr] - dt[pr - 1] > 0 && dt[pr] - dt[pr + 1] > 0)
-        return true;
-    else if(dt[pr] - dt[pr - 1] < 0 && dt[pr] - dt[pr + 1] < 0)
-        return true;
-    return false;
-}
+const ll MOD = 1e9 + 7;
 
 int main()
 {
@@ -52,7 +42,7 @@ int main()
                     break;
                 }
                 
-                if(isPos(dt, pr))
+                if(((dt[pr] - dt[pr - 1]) % MOD) * ((dt[pr] - dt[pr + 1]) % MOD) > 0)
                     pr++;
                 else
                 {
