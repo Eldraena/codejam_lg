@@ -7,7 +7,7 @@ typedef long long ll;
 int n, k, a, b;
 vector<vector<ll>> dp;
 vector<ll>s, cost;
-ll INF_LL = 1e18;
+ll LL_MAX = 1e18;
 
 ll solve(int i, int j)
 {
@@ -42,7 +42,7 @@ int main()
         
         dp.assign(n + 5, vector<ll>(k + 5, -1LL));
         for(int j = 1; j <= k; j++)
-            dp[1][j] = (s[1] >= j) ? cost[1] : INF_LL;
+            dp[1][j] = (s[1] >= j) ? cost[1] : LL_MAX;
             
         cout << solve(n, k) << endl;
     }
