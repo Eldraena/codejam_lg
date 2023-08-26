@@ -5,7 +5,7 @@ using namespace std;
 #define pb push_back
 #define endl "\n"
 typedef long long ll;
-ll LL_MAX = 1e18;
+ll LL_MAX = 1e18, LL_MIN = -1e18;
 
 int main()
 {
