@@ -9,14 +9,14 @@ ll LL_MAX = 1e18, LL_MIN = -1e18;
 
 int main()
 {
-  fio;
+    fio;
 
-  int t;
-  cin >> t;
-  while(t--)
-  {
+    int t;
+    cin >> t;
+    while(t--)
+    {
 
-  }
+    }
   
-  return 0;
+    return 0;
 }
