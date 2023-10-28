@@ -50,8 +50,7 @@ void print_vt_2d(string name, vii& vt)
 
 void solve()
 {
-    vii test = {{1, 2, 3}, {4, 5, 6}};
-    print_vt_2d("test", test);    
+        
 }
 
 int32_t main()
