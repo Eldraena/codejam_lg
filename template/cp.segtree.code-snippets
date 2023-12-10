@@ -111,9 +111,9 @@
 			"		return query(0, n - 1, l, r, 0);",
 			"	}",
 			"",
-			"	void update(int x, int y)",
+			"	void update(int index, int value)",
 			"	{",
-			"		update(0, n - 1, 0, x, y);",
+			"		update(0, n - 1, 0, index, value);",
 			"	}",
 			"};",
 		]
