@@ -48,7 +48,7 @@
     		"    cout << name << \": \" << endl;",
     		"    for(auto x: vt)",
 			"    {",
-			"        for(auto y: x)"
+			"        for(auto y: x)",
         	"           cout << y << \" \";",
 			"        cout << endl;",
 			"    }",
