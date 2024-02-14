@@ -1,0 +1,46 @@
+{
+	"include":
+	{
+		"prefix": "cp.kmp"
+		"body":
+		[
+			"vector<int> longest_prefix_suffix(string s)",
+			"{",
+			"	int n = s.length();",
+			"	vector<int> p(n);",
+			"",
+			"	for (int i = 1; i < n; i++)",
+			"	{",
+			"		int j = p[i - 1];",
+			"		while (j > 0 && s[i] != s[j])",
+			"			j = p[j - 1];",
+			"		if (s[i] == s[j])",
+			"			j++;",
+			"		p[i] = j;",
+			"	}",
+			"",
+			"	return p;",
+			"}",
+			"",
+			"vector<int> kmp(string text, string pattern)",
+			"{",
+			"	string s = pattern + \"#\" + text;",
+			"	int m = pattern.length();",
+			"	int n = text.length();",
+			"	int sz = s.length();",
+			"",
+			"	vector<int> p = longest_prefix_suffix(s);",
+			"	vector<int> res = {};",
+			"",
+			"	for(int i = 2 * m; i < sz; i++)",
+			"	{",
+			"		if(p[i] == m)",
+			"			res.push_back(i - 2 * m);",
+			"	}",
+			"",
+			"	return res;",
+			"}"
+		]
+		"description": "cp.kmp"
+	}
+}
