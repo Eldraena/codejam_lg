@@ -13,7 +13,6 @@ using namespace std;
 #define vpi              vector<pii>
 #define vpp              vector<ppi>
 #define bug(...)          __f (#__VA_ARGS__, __VA_ARGS__)
-#define gcd               __gcd
 #define FOR(i, a, b)      for(long long i = a; i < b; i++)
 
 template<typename Arg1>
